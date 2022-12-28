@@ -1,0 +1,209 @@
+:root {
+   --Red: hsl(1, 90%, 64%);
+   --Blue: hsl(219, 85%, 26%);
+   --White: hsl(0, 0%, 100%);
+   --Very-light-grayish-blue: hsl(210, 60%, 98%);
+   --Light-grayish-blue-1: hsl(211, 68%, 94%);
+   --Light-grayish-blue-2: hsl(205, 33%, 90%);
+   --Grayish-blue: hsl(219, 14%, 63%);
+   --Dark-grayish-blue: hsl(219, 12%, 42%);
+   --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   color: var(--Very-dark-blue);
+}
+
+a {
+   text-decoration: none;
+   color: var(--Dark-grayish-blue);
+}
+
+::-webkit-scrollbar {
+   width: 0px;
+}
+
+img,
+svg,
+i {
+   max-width: 100%;
+}
+
+img {
+   width: 40px;
+}
+
+
+.d-flex {
+   display: flex;
+}
+
+.container {
+   padding: .9rem;
+}
+
+.notif-menu {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: .6rem;
+   margin: 1.4rem 0;
+}
+
+.notif-title {
+   font-size: 1.2rem;
+}
+
+.unread-number {
+   background-color: var(--Blue);
+   color: var(--White);
+   padding: .2em .8em;
+   border-radius: .6em;
+   margin-left: .4rem;
+}
+
+.name {
+   margin-right: 3px;
+}
+
+.name:hover {
+   color: var(--Blue);
+   transition: 200ms;
+}
+
+.name,
+.action-info,
+.unread-number,
+.mark-read {
+   font-size: .9rem;
+}
+
+.name,
+.mark-read,
+.club-name,
+.dm-message,
+.post-pic {
+   cursor: pointer;
+}
+
+.action-info {
+   color: var(--Dark-grayish-blue);
+}
+
+.post,
+.club-name,
+.unread-number {
+   font-weight: 800;
+}
+
+.club-name {
+   color: var(--Blue);
+}
+
+.notifications-container {
+   display: grid;
+   gap: 1rem;
+}
+
+.notification {
+   font-size: .9em;
+   display: flex;
+   flex-direction: column;
+   border-radius: .6rem;
+   padding: .8rem;
+}
+
+.unread-notification {
+   background-color: var(--Very-light-grayish-blue);
+}
+
+.profile-info {
+   display: flex;
+}
+
+.image-container {
+   width: 100%;
+   max-width: 45px;
+   margin-right: .3rem;
+}
+
+.unread-indicator {
+   width: 10px;
+   height: 10px;
+   display: inline-block;
+   border-radius: 100%;
+   margin-left: 3px;
+   background-color: var(--Red);
+}
+
+.dm-message {
+   border: 1px solid var(--Grayish-blue);
+   font-size: .9rem;
+   padding: .8rem;
+   border-radius: .6rem;
+   width: 85%;
+   margin-left: 3rem;
+   margin-top: .3rem;
+}
+
+.dm-message:hover {
+   border: 1px solid transparent;
+   background-color: var(--Light-grayish-blue-1);
+   transition: 300ms;
+}
+
+.notification.message-active {
+   background-color: transparent;
+}
+
+.post-pic:hover {
+   box-shadow: 0 0 7px hsl(211, 100%, 87%);
+   transition: 200ms;
+}
+
+.post-pic {
+   max-height: 43px;
+   margin-left: auto;
+}
+
+h1,
+p {
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 965px) {
+   body {
+      padding: 2rem 0;
+   }
+
+   .container {
+      box-shadow: 0 0 7px var(--Light-grayish-blue-1);
+      border-radius: 1rem;
+      width: 50%;
+      margin: 0 auto;
+      padding: 1.4rem;
+   }
+
+   ::-webkit-scrollbar {
+      width: 17px;
+   }
+
+   ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 3px var(--Blue);
+   }
+
+   ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      appearance: none;
+      background: var(--Blue);
+   }
+}
